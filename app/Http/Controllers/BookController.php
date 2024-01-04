@@ -43,7 +43,7 @@ class BookController extends Controller
         ]);
         Book::create($request->all());
 
-        return redirect()->route('book.index')->with('success', 'Data added successfully');
+        return redirect()->route('admin.book.index')->with('success', 'Data added successfully');
     }
     public function show($id)
     {
@@ -86,7 +86,7 @@ class BookController extends Controller
 
         $book->update($request->all());
 
-        return redirect()->route('book.index')->with('success', 'Book updated successfully');
+        return redirect()->route('admin.book.index')->with('success', 'Book updated successfully');
     }
          
 
@@ -102,7 +102,7 @@ class BookController extends Controller
 
         $book->delete();
 
-        return redirect()->route('book.index')->with('success', 'Book deleted successfully');
+        return redirect()->route('admin.book.index')->with('success', 'Book deleted successfully');
     }
 
 }

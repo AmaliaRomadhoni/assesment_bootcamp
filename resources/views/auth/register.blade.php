@@ -19,15 +19,15 @@
 
 <body class="hold-transition register-page">
     <div class="register-box">
-        <div class="register-logo">
-            <a href="{{ asset('admintemplate') }}/index2.html"><b>Admin</b>LTE</a>
-        </div>
-
+      
         <div class="card">
             <div class="card-body register-card-body">
+                <div class="login-logo">
+                    <b>Register</b>
+                 </div>
                 <p class="login-box-msg">Register a new membership</p>
 
-                <form action="{{ route('register') }}" method="post">
+                <form action="{{ route('register-proses') }}" method="post">
                     @csrf
                     <div class="form-group">
                         <div class="input-group mb-3">
@@ -74,14 +74,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Retype password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="row">
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>

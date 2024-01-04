@@ -33,7 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Sidebar Container -->
                 <aside class="main-sidebar sidebar-dark-primary elevation-4">
                     <!-- Brand Logo -->
-                    <a href="index3.html" class="brand-link">
+                    <a href="#" class="brand-link">
                         <img src="{{ asset('admintemplate') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                             class="brand-image img-circle elevation-3" style="opacity: .8">
                         <span class="brand-text font-weight-light">Amalia R</span>
@@ -45,37 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </aside>
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('book.index')}}">Data</a>
-                                </li>
-
-                                
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-default text-capitalize">logout</button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.navbar -->
+        
 
         <!-- Main Sidebar Container -->
        

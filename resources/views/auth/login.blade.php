@@ -19,15 +19,16 @@
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="{{ asset('admintemplate') }}/index2.html"><b>Admin</b>LTE</a>
-        </div>
+        
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
+                <div class="login-logo">
+                   <b>Login</b>
+                </div>
                 <p class="login-box-msg">Sign in to start your session</p>
 
-                <form action="{{ route('login') }}" method="post">
+                <form action="{{ route('login-proses') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
                         <input name="email" type="email" class="form-control @error('name')
@@ -39,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    @error('name')
+                    @error('email')
                     <div class="invalid-feedback m-0">{{ $message }}</div>
                     @enderror
                     <div class="input-group mb-3">
@@ -53,13 +54,19 @@
                         </div>
                     </div>
                     @error('password')
-                    <div class="invalid-feedback m-0">{{ $message }}</div>
+                    {{ $message }}
                     @enderror
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                         </div>
+
+                        <p class="col-500">
+                            <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
+                          </p>
+
+                        
                         <!-- /.col -->
                     </div>
                 </form>

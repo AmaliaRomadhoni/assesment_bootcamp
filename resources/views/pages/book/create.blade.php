@@ -4,7 +4,7 @@
 <h1 class="mb-0">Form Create</h1>
 <hr />
 
-    <form action="{{ route('book.store') }}" method="POST">
+    <form action="{{ route('admin.book.store') }}" method="POST">
     
      
         @csrf

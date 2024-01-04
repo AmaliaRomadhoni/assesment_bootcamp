@@ -10,15 +10,14 @@
  
             <div class="card-tools">
             <div class="input-group input-group-sm" style="width:350px;">
-              <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+             
             
               <div class="input-group-append">
-                <button type="submit" class="btn btn-default">
-                  <i class="fas fa-search"></i>
+               </i>
                 </button>
               </div>
 
-              <td><div>  <a href="{{ route('user.create') }}" button class="btn btn-primary">+Add</a>
+              <td><div>  <a href="{{ route('admin.user.create') }}" button class="btn btn-primary">Add</a>
         </div></td>
               
             </div>
@@ -46,8 +45,8 @@
                             <td class="align-middle">{{ $d->email }}</td>
                             <td class="align-middle">
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="#" class="btn btn-success"><i class="fas fa-pen"></i></a>
-                                    <form action="{{ route('user.destroy', $d->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
+                                    
+                                    <form action="{{ route('admin.user.destroy', $d->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
                                         @csrf
                                         @method('DELETE')
                                         <button class="nav-link text-danger"><i class="fas fa-trash"></i></button>

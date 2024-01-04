@@ -50,15 +50,8 @@ class UserController extends Controller
     $data['email'] = $request->email;
     $data['password'] = Hash::make($request->password);
     User::create($data);
-return redirect()->route('user.index');
+return redirect()->route('admin.user.index');
 }
-
-
-
-
-
-
-
 
 
 
@@ -74,7 +67,7 @@ return redirect()->route('user.index');
 
         $data->delete();
 
-        return redirect()->route('user.index')->with('success', 'Book deleted successfully');
+        return redirect()->route('admin.user.index')->with('success', 'Book deleted successfully');
     }
 
 

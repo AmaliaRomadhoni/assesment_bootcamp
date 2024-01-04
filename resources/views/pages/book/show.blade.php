@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 class="mb-0">Form Create</Form></h1>
+<h1 class="mb-0">Form Show</Form></h1>
    
 
     
@@ -36,11 +36,15 @@
             <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="{{ $book->updated_at }}" readonly>
         </div>
     </div>
-        <div class="row">
-            <div class="d-grid">
-                <a href="{{ route('book.index') }}" button class="btn btn-secondary">Back</button>
-            </div>
         
+   
+          
+
+            <div class="row">
+                <div class="d-grid">
+                    <a href="{{ route('admin.book.index') }}" button class="btn btn-secondary">Back</a>
+                </div>
+            </div>
     </form>
    
       
