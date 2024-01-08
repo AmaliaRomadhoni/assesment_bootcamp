@@ -9,20 +9,41 @@
                 
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('admin.user.index') }}"  class="nav-link">
+                        <a href="{{ route('user.index') }}"  class="nav-link">
                             <i class="fa fa-user"></i>
                             <p>User</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('admin.book.index') }}"  class="nav-link">
+                        <a href="{{ route('book.index') }}"  class="nav-link">
                            <i class="fas fa-book"></i>
-                     <p>Repository</p>
+                     <p>Mata Kuliah</p>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}"  class="nav-link">
+                        <a href="{{ route('student.index') }}"  class="nav-link">
+                           <i class="fas fa-book"></i>
+                     <p>Mahasiswa</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('teacher.index') }}"  class="nav-link">
+                           <i class="fas fa-book"></i>
+                     <p>Dosen</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('prodi.index') }}"  class="nav-link">
+                           <i class="fas fa-book"></i>
+                     <p>Prodi</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#"  class="nav-link">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Logout</p>
                         </a>

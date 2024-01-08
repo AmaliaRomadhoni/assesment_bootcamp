@@ -7,12 +7,12 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <td class="align-middle"><h3>Data Mata Kuliah</h3></h3>
+          <td class="align-middle"><h3>Data Mahasiswa</h3></h3>
  
             <div class="card-tools">
            
 
-              <td><div>  <a href="{{ route('book.create') }}" button class="btn btn-primary">Add</a>
+              <td><div>  <a href="{{ route('student.create') }}" button class="btn btn-primary">Add</a>
         </div></td>
               
             </div>
@@ -30,28 +30,28 @@
         </div>
     @endif
                 <th>No</th>
-                <th>Nama Mata Kuliah</th>
-                <th>Semester</th>
-                <th>Sks</th>
-                <th>Description</th>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Jurusan</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @if($books->count() > 0)
-                @foreach($books as $book)
+            @if($students->count() > 0)
+                @foreach($students as $student)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $book->name }}</td>
-                        <td class="align-middle">{{ $book->author }}</td>
-                        <td class="align-middle">{{ $book->year }}</td>
-                        <td class="align-middle">{{ $book->description }}</td>
+                        <td class="align-middle">{{ $student->npm }}</td>
+                        <td class="align-middle">{{ $student->nama }}</td>
+                        <td class="align-middle">{{ $student->alamat }}</td>
+                        <td class="align-middle">{{ $student->jurusan }}</td>
                         <td class="align-middle">
                             
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="{{ route('book.show', $book->id)}}" class="btn btn-secondary"><i class="fas fa-eye"></i></a>
-                                    <a href="{{ route('book.edit', $book->id)}}" class="btn btn-success"><i class="fas fa-pen"></i></a>
-                                    <form action="{{ route('book.destroy', $book->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
+                                    <a href="{{ route('student.show', $student->id)}}" class="btn btn-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ route('student.edit', $student->id)}}" class="btn btn-success"><i class="fas fa-pen"></i></a>
+                                    <form action="{{ route('student.destroy', $student->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
                                         @csrf
                                         @method('DELETE')
                                         <button class="nav-link text-danger"><i class="fas fa-trash"></i></button>
@@ -61,7 +61,7 @@
                 @endforeach
             @else 
                 <tr>
-                    <td class="text-center" colspan="5">Data not found</td>
+                    <td class="text-center" colspan="5">Book not found</td>
                 </tr>
             @endif
         </tbody>

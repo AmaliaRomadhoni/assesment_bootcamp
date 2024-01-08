@@ -4,7 +4,7 @@
 <h1 class="mb-0">Form Create</h1>
 <hr />
 
-    <form action="{{ route('book.store') }}" method="POST">
+    <form action="{{ route('prodi.store') }}" method="POST">
     
      
         @csrf
@@ -12,9 +12,9 @@
 
         
             <div class="form-group" mb-3>
-                <label for="title">Nama Mata kuliah</label>
-                <input type="text" name="name" class="form-control" placeholder="">
-              @error('name')
+                <label for="title">Kode Prodi</label>
+                <input type="text" name="kode_prodi" class="form-control" placeholder="">
+              @error('npm')
               <small>
                 {{ $message}}</small>
                 @enderror
@@ -23,26 +23,26 @@
              
   
               <div class="form-group">
-                <label for="title">SKS</label>
-                <input type="text" name="author" class="form-control" placeholder="">
-                @error('author')
+                <label for="title">Nama Prodi</label>
+                <input type="text" name="nama_prodi" class="form-control" placeholder="">
+                @error('nama')
                 <small>
                   {{ $message}}</small>
                   @enderror
               </div>
   
               <div class="form-group">
-                <label for="title">Semester</label>
-                <input type="text" name="year" class="form-control" placeholder="">
-                @error('year')
+                <label for="title">Fakultas</label>
+                <input type="text" name="fakultas" class="form-control" placeholder="">
+                @error('alamat')
                 <small>
                   {{ $message}}</small>
                   @enderror
               </div>
 
               <div class="form-group">
-                <label for="title">Deskripsi</label>
-                <input type="text" name="description" class="form-control" placeholder="">
+                <label for="title">Akreditasi</label>
+                <input type="text" name="akreditasi" class="form-control" placeholder="">
                 @error('description')
                 <small>
                   {{ $message}}</small>

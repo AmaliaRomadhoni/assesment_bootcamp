@@ -3,22 +3,22 @@
 @section('content')
     <h1 class="mb-0">Form Edit</h1>
     <hr />
-    <form action="{{ route('admin.book.update', $book->id) }}" method="POST">
+    <form action="{{ route('book.update', $book->id) }}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="form-group">
-            <label for="title">Title</label>
+            <label for="title">Nama Mata Kuliah</label>
             <input type="text" name="name" class="form-control" placeholder="" value="{{ $book->name }}">
         </div>
 
         <div class="form-group">
-            <label for="title">Author</label>
+            <label for="title">SKS</label>
             <input type="text" name="author" class="form-control" placeholder="" value="{{ $book->author }}">
         </div>
 
         <div class="form-group">
-            <label for="title">Year</label>
+            <label for="title">Semester</label>
             <input type="text" name="year" class="form-control" placeholder="" value="{{ $book->year }}">
         </div>
 

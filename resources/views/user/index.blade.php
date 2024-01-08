@@ -17,7 +17,7 @@
                 </button>
               </div>
 
-              <td><div>  <a href="{{ route('admin.user.create') }}" button class="btn btn-primary">Add</a>
+              <td><div>  <a href="{{ route('user.create') }}" button class="btn btn-primary">Add</a>
         </div></td>
               
             </div>
@@ -46,7 +46,7 @@
                             <td class="align-middle">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     
-                                    <form action="{{ route('admin.user.destroy', $d->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
+                                    <form action="{{ route('user.destroy', $d->id) }}" method="POST" type="button" class="nav-link text-danger  p-0" onsubmit="return confirm('Delete?')">
                                         @csrf
                                         @method('DELETE')
                                         <button class="nav-link text-danger"><i class="fas fa-trash"></i></button>

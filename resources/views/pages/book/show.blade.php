@@ -8,17 +8,17 @@
     
 
     <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Nama Mata Kuliah</label>
         <input type="text" name="name" class="form-control" placeholder="" value="{{ $book->name }}" readonly>
     </div>
 
     <div class="form-group">
-        <label for="title">Author</label>
+        <label for="title">SKS</label>
         <input type="text" name="author" class="form-control" placeholder="" value="{{ $book->author }}" readonly>
     </div>
 
     <div class="form-group">
-        <label for="title">Year</label>
+        <label for="title">Semester</label>
         <input type="text" name="year" class="form-control" placeholder="" value="{{ $book->year }}" readonly>
     </div>
     <div class="form-group">
@@ -42,7 +42,7 @@
 
             <div class="row">
                 <div class="d-grid">
-                    <a href="{{ route('admin.book.index') }}" button class="btn btn-secondary">Back</a>
+                    <a href="{{ route('book.index') }}" button class="btn btn-secondary">Back</a>
                 </div>
             </div>
     </form>
